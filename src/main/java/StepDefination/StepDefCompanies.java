@@ -89,12 +89,12 @@ public class StepDefCompanies extends Base{
 
 	@Then("^User Go To Document Page$")
 	public void user_Go_To_Companies_Page() throws Throwable {
-	
+	    System.out.println("User Open Document Page");
 	}
 
 	@Then("^User Open Export File Folder$")
 	public void user_Open_Export_File_Folder() throws Throwable {
-	  
+	  System.out.println("User open File Folders");
 	}
 
 	@Then("^Check with New File is created with name Comapnies export and current time$")
