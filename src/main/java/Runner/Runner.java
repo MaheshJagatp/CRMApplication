@@ -8,9 +8,9 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		
-		features="D:\\java_test\\ZZZZDemopro\\Features",
+		features="D:\\java_test\\ZZZZDemopro\\Features\\Contact.feature:17",
 		glue= {"StepDefination"}
-		
+		,dryRun=false
 		
 		
 		

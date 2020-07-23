@@ -6,6 +6,14 @@ When User Enter UserName and Password
 Then User Successfully Enters In Application
 
 
+Scenario:
+Given User Click On Contact Page
+When User Checkes all Buttons are availiable On Contact Page
+Then Contact Page Have All Buttons
+
+
+
+
 Scenario Outline: Creates New Contacts in Contact Page
 
 Given User Click On Contact Page

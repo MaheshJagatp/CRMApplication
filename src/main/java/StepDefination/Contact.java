@@ -3,6 +3,8 @@ package StepDefination;
 import Base.Base;
 import PageLayer.ContactPage;
 import PageLayer.LoginPage;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -12,9 +14,24 @@ import junit.framework.Assert;
 public class Contact extends Base {
 	LoginPage loginpage;
 	ContactPage contactpage;
+	boolean b=false;
+	
+	
+	
 	public Contact() {
 		super();
 	}
+	
+	@Before
+	public void beforeHooks() {
+		
+	}
+	
+	@After
+	public void afterHooks() {
+		driver.quit();
+	}
+	
 	
 	
 	@Given("^When User Enters URL$")
@@ -53,9 +70,25 @@ public class Contact extends Base {
 		
 	}
 
+	@When("^User Checkes all Buttons are availiable On Contact Page$")
+	public void user_Checkes_all_Buttons_are_availiable_On_Contact_Page() {
+		 b=contactpage.ContactCheckBtn();
+	    
+	}
+
+	@Then("^Contact Page Have All Buttons$")
+	public void contact_Page_Have_All_Buttons() {
+	    Assert.assertEquals(true, b);
+		
+	}
+
+	
+	
+	
+	
 	@When("^User Click On New Button to Create Contacts$")
 	public void user_Click_On_New_Button_to_Create_Contacts()  {
-	    
+    
 		contactpage.newBtnClick();
 		
 	}
