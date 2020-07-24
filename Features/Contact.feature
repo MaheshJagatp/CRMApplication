@@ -18,9 +18,9 @@ Scenario Outline: Creates New Contacts in Contact Page
 
 Given User Click On Contact Page
 When User Click On New Button to Create Contacts
-And User Provides Details "<First Name>" and "< Last Name>" and "<Middle Name>" and "<Company Name>" and "<Email>" and "<Status>" and "<Description>" and "<Day>" and "<Month>" and "<Year>"
+And User Provides Details "<FirstName>" and "<LastName>" and "<MiddleName>"  and "<Email>"  and "<Description>" and "<Day>"  and "<Year>"
 Then User Create Contact Successfully
 
 Examples:
-|First Name | Last Name | Middle Name | Company Name | Email            | Status | Description | Day | Month | Year|
-|AKSHAY     |JAGTAP     |SURESH       |SCHILDER      |Akjagtap@gmail.com|  NEW   |NEW CONTACT  | 12  |12     | 1998|
+|FirstName  | LastName  | MiddleName  |Email             |  Description | Day |  Year|
+|AKSHAY     |JAGTAP     |SURESH       |Akjagtap@gmail.com|NEW CONTACT   |12   |1998  |

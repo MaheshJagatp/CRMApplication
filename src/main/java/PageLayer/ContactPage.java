@@ -70,7 +70,8 @@ public class ContactPage extends Base {
 	@FindBy(xpath=Configuration.contactYearInput)
 	WebElement contactyearinput;
 	
-	
+	@FindBy(xpath=Configuration.contactSaveBtn)
+	WebElement contactsavebtn;
 	
 	
 	
@@ -106,7 +107,8 @@ public class ContactPage extends Base {
 		contactnewbtn.click();
 	}
 	
-	public void fillContactInformationForm(String firstname) {
+	public void fillContactInformationForm(String firstname,String Lastname,String middlename,
+			String emailadd,String desc,String day,String year) {
 		//contactfirstnameinput.sendKeys(Keys.F5);
 		driver.navigate().refresh();
 		try {
@@ -118,11 +120,20 @@ public class ContactPage extends Base {
 		driver.navigate().refresh();
 		
 		wait.until(ExpectedConditions.elementToBeClickable(contactfirstnameinput)).sendKeys(firstname);
+		contactlastnameinput.sendKeys(Lastname);
+		contactmiddlenameinput.sendKeys(middlename);
 		
-	
-	//	Util.selectclass(contactstatusinput,"New");
+		//wait.until(ExpectedConditions.elementToBeClickable(contactcompanyinput)).sendKeys(contactcomp);
+		//contactcompanyinput.sendKeys(contactcomp);
+		contactemailaddressinput.sendKeys(emailadd);
+		//	Util.selectclass(contactstatusinput,"New");
 		
-		
+		contactdescriptioninput.sendKeys(desc);
+		contactdayinput.sendKeys(day);
+		//contactmonthinput.sendKeys(month);
+		contactyearinput.sendKeys(year);
+		contactsavebtn.click();
+		contactPageClick.click();
 		
 	}
 	

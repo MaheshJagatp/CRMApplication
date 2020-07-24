@@ -28,6 +28,6 @@ public class Configuration {
 	public static final String contactDayInput="//*[@name='day']";
 	public static final String contactMonthInput="//*[@name='month']";
 	public static final String contactYearInput="//*[@name='year']";  //select
+	public static final String contactSaveBtn="//*[text()='Save']";
 	
-
 }
